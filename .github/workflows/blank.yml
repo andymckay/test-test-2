@@ -3,6 +3,7 @@ name: CI
 on: [push]
 env: 
   MSG: Hello
+  BOOLEAN: true
 
 jobs:
   
@@ -19,7 +20,9 @@ jobs:
     - name: Maybe
       if: env.NOMSG
       run: echo Maybe $NOMSG
-
+    - name: Boolean
+      if: env.BOOLEAN
+      run: echo Boolean $BOOLEAN
 
 
 
