@@ -34,6 +34,9 @@ jobs:
     - name: Boolean false
       if: env.NOTBOOLEAN
       run: echo Boolean false $NOTBOOLEAN
+    - name: Boolean false string check
+      if: env.NOTBOOLEAN == 'true'
+      run: echo Boolean false string check $NOTBOOLEAN
     - name: Empty string
       if: env.EMPTY
       run: echo Empty string
