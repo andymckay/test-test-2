@@ -20,10 +20,10 @@ jobs:
       if: env.MSG
       run: echo String $NOMSG
     - name: String matches
-      if: env.MSG == "Hello"
+      if: env.MSG == 'Hello'
       run: echo String matches Hello
     - name: No string matches
-      if: env.MSG == "Nope"
+      if: env.MSG == 'Nope'
       run: echo String matches Nope
     - name: No such env
       if: env.NOMSG
