@@ -4,6 +4,7 @@ on: [push]
 env: 
   MSG: Hello
   BOOLEAN: true
+  NOTBOOLEAN: false
 
 jobs:
   
@@ -14,16 +15,18 @@ jobs:
     steps:
     - name: Run a one-line script
       run: echo $MSG
-    - name: Maybe
+    - name: String
       if: env.MSG
-      run: echo Maybe $NOMSG
-    - name: Maybe
+      run: echo String $NOMSG
+    - name: No such env
       if: env.NOMSG
-      run: echo Maybe $NOMSG
-    - name: Boolean
+      run: echo No env $NOMSG
+    - name: Boolean True
       if: env.BOOLEAN
-      run: echo Boolean $BOOLEAN
-
+      run: echo Boolean true $BOOLEAN
+    - name: Boolean false
+      if: env.NOTBOOLEAN
+      run: echo Boolean false $NOTBOOLEAN
 
 
 
