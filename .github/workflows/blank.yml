@@ -14,10 +14,11 @@ jobs:
     - name: Run a one-line script
       run: echo $MSG
     - name: Maybe
-      if: $NOMSG
+      if: env.MSG
       run: echo Maybe: $NOMSG
-
-
+    - name: Maybe
+      if: env.NOMSG
+      run: echo Maybe: $NOMSG
 
 
 
