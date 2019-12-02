@@ -10,7 +10,7 @@ env:
 jobs:
   
   build: 
-    if: github.env.MSG
+    if: 0
     runs-on: ubuntu-latest
 
     steps:
