@@ -8,11 +8,9 @@ env:
   EMPTY: ""
 
 jobs:
-  
   build: 
-    if: 'x' == 'y'
+    if: env.MSG
     runs-on: ubuntu-latest
-
     steps:
     - name: Run a one-line script
       run: echo $MSG
