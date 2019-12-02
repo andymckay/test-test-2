@@ -9,8 +9,8 @@ env:
 
 jobs:
   
-  build:
-
+  build: 
+    if: env.MSG
     runs-on: ubuntu-latest
 
     steps:
