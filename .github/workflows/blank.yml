@@ -9,7 +9,7 @@ env:
 
 jobs:
   build: 
-    if: github.env.MSG
+    if: github.env.MSG == 'Hello'
     runs-on: ubuntu-latest
     steps:
     - name: Run a one-line script
